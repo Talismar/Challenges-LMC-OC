@@ -1,0 +1,24 @@
+9 - A program that counts down from any input value.
+
+##########	Codigo 	###########
+number 	DAT
+sub1	DAT 1
+
+		INP
+		STA number
+loop 	OUT
+		SUB sub1
+		STA number 
+		BRZ aux
+		BRP loop
+aux 	HLT
+		
+################### Comentario ################
+DAT - DATA LOCATION - Ou seja serve para voce declarar uma variavel - Que no caso é nomeado como number, sub1
+INP - INPUT - Para entrar com algum valor
+OUT - OUTPUT -Para imprimir o valor na tela de saida
+STA - STORE - Para armazenar um valor a um endereço de memoria 
+SUB - SUB - Responsavel por executar uma subtração 
+BRP - BRANCH IF POSITIVE - Ramificar para o endereço fornecido se o Acumulador for zero ou positivo, no caso tou usando a variavel auxiliar ou funcao loop pra Ramificar
+BRZ - BRANCH IF ZERO - Salta para uma endereço fornecido se o valor for zero, que no caso usei pra quando o valor da subtração for 0 eu encerro o programa com o HLT usei a variavel auxiliar aux.
+HLT - HALT - Parar a execução do programa

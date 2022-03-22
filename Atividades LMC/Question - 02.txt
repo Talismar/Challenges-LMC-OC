@@ -1,0 +1,21 @@
+2 - A program that adds two inputs together and outputs the result.
+
+
+######## Codigo #############
+      INP
+      STA num1      
+      INP     
+      ADD num1
+      OUT
+      HLT
+	  
+num1  DAT
+
+
+#############  Comentario #############
+DAT - DATA LOCATION - Ou seja serve para voce declarar uma variavel - Que no caso é nomeado como num1
+INP - INPUT - Para entrar com algum valor
+OUT - OUTPUT -Para imprimir o valor na tela de saida
+STA - STORE - Para armazenar um valor a um endereço de memoria 
+ADD - Responsavel por executar uma soma - Adição
+HLT - HALT - Parar a execução do programa

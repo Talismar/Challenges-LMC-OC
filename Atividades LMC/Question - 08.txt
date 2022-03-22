@@ -1,0 +1,29 @@
+8 - A program that takes two inputs and subtracts the second from the first. If the result is negative, the program should subtract the first input from the second.
+
+########### Codigo ############
+num1	DAT
+num2	DAT
+
+		INP
+		STA num1
+		INP
+		STA num2
+		SUB num1
+		BRP exit
+		OUT
+		LDA num1
+		SUB num2
+
+exit	OUT
+		HLT
+
+
+#################### Comentario #################
+DAT - DATA LOCATION - Ou seja serve para voce declarar uma variavel - Que no caso é nomeado como num1, num2
+INP - INPUT - Para entrar com algum valor
+OUT - OUTPUT -Para imprimir o valor na tela de saida
+STA - STORE - Para armazenar um valor a um endereço de memoria 
+SUB - SUB - Responsavel por executar uma subtração 
+LDA - LOAD - Carregar o valor de um endereço
+BRP - BRANCH IF POSITIVE - Ramificar para o endereço fornecido se o Acumulador for zero ou positivo, no caso tou usando a variavel exit pra Ramificar
+HLT - HALT - Parar a execução do programa

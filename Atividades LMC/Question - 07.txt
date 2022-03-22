@@ -1,0 +1,98 @@
+7 - A program that takes three inputs and Outputs them in ascending order.
+
+########## Codigo ###########
+num1	DAT
+num2	DAT
+num3	DAT
+out1	DAT 
+out2	DAT 
+out3 	DAT
+troca	DAT
+
+		INP
+		STA num1
+		INP
+		STA num2
+		INP
+		STA num3
+	
+		LDA num1
+		SUB num2
+
+		BRP aux1
+		LDA num1
+		STA out1
+		LDA num2
+		STA out2
+
+		BRA aux0
+	
+aux1	LDA num1
+		STA out2
+		LDA num2
+		STA out1
+	
+aux0	LDA out2
+		SUB num3
+
+		BRP aux2
+		LDA num3
+		STA out3
+
+		BRA aux3
+
+aux2	LDA out2
+		STA troca
+		LDA num3
+		STA out2
+		LDA troca
+		STA out3
+
+		BRP aux5
+		
+aux3	LDA out1
+		SUB out3
+
+		BRP aux4
+
+		BRA exit
+
+aux4	LDA out3
+		STA troca
+		LDA out1
+		STA out3
+		LDA troca
+		STA out1
+
+aux5	LDA out1
+		SUB out2
+
+		BRP aux6
+
+	    BRA exit
+
+aux6	LDA out1
+		STA troca
+		LDA out2
+		STA out1
+		LDA troca
+		STA out2
+
+exit	LDA out1
+	    OUT
+		LDA out2
+		OUT
+		LDA out3
+		OUT
+		HLT
+
+#################### Comentario ##################
+DAT - DATA LOCATION - Ou seja serve para voce declarar uma variavel nesse codigo uso umas dessas variaveis como auxiliar - DAT -> num1, num2, num3, out1, out2, out3, troca
+INP - INPUT - Para entrar com algum valor
+OUT - OUTPUT -Para imprimir o valor na tela de saida
+STA - STORE - Para armazenar um valor a um endereço de memoria 
+SUB - SUB - Responsavel por executar uma subtração 
+LDA - LOAD - Carregar o valor de um endereço
+BRP - BRANCH IF POSITIVE - Ramificar para o endereço fornecido se o Acumulador for zero ou positivo, no caso tou usando a variavel aux1, aux2, aux4, aux5 e aux6 pra Ramificar para outra logica pra eu ir armazenando os menores valores nas sequencias pra quando eu chamar o BRA com o exit eu dar a saida ordenada do jeito que o programa pediu
+BRA - BRANCH ALWAYS - Ramificar para um endereço fornecido. no caso tou usando a variavel exit, aux0, aux3
+HLT - HALT - Parar a execução do programa

@@ -1,0 +1,15 @@
+1 - A program that loads and outputs the value 10.
+
+######### Codigo ############
+number  DAT 10
+
+        LDA number
+	  	OUT
+		HLT
+
+
+##### Comentario ###############
+DAT - DATA LOCATION - Ou seja serve para voce declarar uma variavel - Que no caso é nomeado como number
+LDA - LOAD - Carregar o valor de um endereço
+OUT - OUTPUT -Para imprimir o valor na tela de saida
+HLT - HALT - Parar a execução do programa

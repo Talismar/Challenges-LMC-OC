@@ -1,0 +1,36 @@
+6 - A program that outputs the larger of three input values.
+
+########### Codigo ##########
+first   DAT
+second  DAT
+third   DAT
+
+    	INP
+   		STA first
+    	INP
+    	STA second
+    	INP
+	    STA third
+
+    	SUB second
+	    BRP aux1
+    	LDA segund
+	    STA third
+aux1    LDA third
+	    SUB first
+    	BRP aux2
+	    LDA first
+    	STA third
+aux2    LDA third
+	    OUT
+    	HLT
+
+############## Comentario ###################
+DAT - DATA LOCATION - Ou seja serve para voce declarar uma variavel - Que no caso é nomeado como first, second, third  
+INP - INPUT - Para entrar com algum valor
+OUT - OUTPUT -Para imprimir o valor na tela de saida
+STA - STORE - Para armazenar um valor a um endereço de memoria 
+SUB - SUB - Responsavel por executar uma subtração 
+LDA - LOAD - Carregar o valor de um endereço
+BRP - BRANCH IF POSITIVE - Ramificar para o endereço fornecido se o Acumulador for zero ou positivo, no caso tou usando as variaveis aux1 e aux2 pra Ramificar pra os locais onde estão no codigo
+HLT - HALT - Parar a execução do programa 

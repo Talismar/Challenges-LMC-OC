@@ -1,0 +1,28 @@
+3 - A program that adds three inputs togetheer and outputs the result.
+
+########## Codigo ###########
+	INP 
+	STA number1
+	INP 
+	STA number2
+	INP 
+	STA number3
+
+	LDA number1
+	ADD number2
+	ADD number3
+	OUT
+	HLT
+
+number1 DAT
+number2 DAT
+number3 DAT
+
+############ Comentario ###############
+DAT - DATA LOCATION - Ou seja serve para voce declarar uma variavel - Que no caso é nomeado como number1, number2, number3
+INP - INPUT - Para entrar com algum valor
+STA - STORE - Para armazenar um valor a um endereço de memoria 
+ADD - Responsavel por executar uma soma - Adição
+LDA - LOAD - Carregar o valor de um endereço
+OUT - OUTPUT -Para imprimir o valor na tela de saida
+HLT - HALT - Parar a execução do programa
